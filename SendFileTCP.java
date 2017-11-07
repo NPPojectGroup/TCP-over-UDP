@@ -26,7 +26,7 @@ public class SendFileTCP {
 	static int window_size = 10;
 			
 	
-	boolean transComp;	// if receiver has completely received the file
+	boolean transComp;	// if client has completely received the file
 	
 	public void setTimer(boolean isNewTimer){
 		// function to start and stop timer
@@ -153,7 +153,7 @@ public class SendFileTCP {
 				
 				 
 				try {
-					// while there are still packets yet to be received by receiver
+					// while there are still packets yet to be received by client
 					while (!transComp){
 						// send packets if window is not yet full
 						if (nextSeqNum < base + window_size){
